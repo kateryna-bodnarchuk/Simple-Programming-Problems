@@ -1,4 +1,6 @@
-﻿# Simple Programming Problems
+﻿I'm beginner C# programmer. And I implemented multiple simple programming problems on C# language.
+
+# Simple Programming Problems
 Whenever I’m TA for a introductory CS class where students learn some programming language, I have trouble coming up with good exercises. Problems from Project Euler and the like are usually much too difficult for beginners, especially if they don’t have a strong background in mathematics.
 This page is a collection of progressively more difficult exercises that are suitable for people who just started learning. It will be extended as I come up with new exercises. Except for the GUI questions, exercises are generally algorithmic and should be solvable without learning any libraries. The difficulty of the exercises of course somewhat depends on the programming language you use. The List exercises for example are more complicated in languages like C that don’t have build-in support for lists.
 I suppose they are also useful, although much easier, whenever an experienced person wants to learn a new language.
