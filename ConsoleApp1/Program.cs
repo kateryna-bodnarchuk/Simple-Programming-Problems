@@ -4,32 +4,26 @@ using System.Collections;
 using System.Linq;
 using System.Diagnostics;
 using System.Collections.Generic;
+using ClassLibrary1;
 
 namespace ConsoleApp1
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            int[] numbers = new int[] { 16, 26, 46, 56, 100, 76 };
+            var game = new Game(secret: 5, log: Console.WriteLine);
 
-            int sum = 0;
+            Console.WriteLine("Guess number from 1 to 9");
 
-            //for (int i = 0; i < numbers.Length; i++)
-            //{
-            //    sum += numbers [i];
-            //    Console.WriteLine(sum);
-            //}
-
-            int i = 0;
-            while (i < numbers.Length)
+            while (true)
             {
-                sum += numbers[i];
-                i++;
-                Console.WriteLine(sum);
+                string userValue = Console.ReadLine();
+                int input = int.Parse(userValue);
+
+                if (game.Match(input)) break;
             }
-            Console.ReadKey();
+            Console.WriteLine();
         }
     }
 }
-    
