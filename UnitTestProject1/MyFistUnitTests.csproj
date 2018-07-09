@@ -56,13 +56,12 @@
     <Compile Include="Elementary\Test08_PrimeNumbers.cs" />
     <Compile Include="Elementary\Test06_SumOrProduct.cs" />
     <Compile Include="Elementary\Test05_SumIf.cs" />
-    <Compile Include="ListsAndStrings\Test07_Sums.cs" />
     <Compile Include="ListsAndStrings\Test01_LagestElement.cs" />
     <Compile Include="ListsAndStrings\Test03_Check.cs" />
     <Compile Include="ListsAndStrings\Test04_Odds.cs" />
     <Compile Include="ListsAndStrings\Test05_RunningTotal.cs" />
-    <Compile Include="ListsAndStrings\Test06_Palindrome.cs" />
     <Compile Include="ListsAndStrings\Test02_Reverse.cs" />
+    <Compile Include="ListsAndStrings\Test06_Palindrome.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RangeSum.cs" />

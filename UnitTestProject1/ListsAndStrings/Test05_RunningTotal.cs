@@ -11,7 +11,7 @@ namespace UnitTestProject1.ListsAndStrings
     {
         int Calculate(List<int> a)
         {
-            var list = new HashSet<int>(a);
+            var list = new List <int>(a);
             int sum = list.Sum();
             return sum;
         }
