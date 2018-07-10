@@ -5,33 +5,32 @@ using System.Collections.Generic;
 
 namespace UnitTestProject1.Elementary
 {
+    /// <summary>
+    /// Write a program that asks the user for a number n and gives them the possibility 
+    /// to choose between computing the sum and computing the product of 1,…,n.
+    /// </summary>
     [TestClass]
     public class Test06_SumOrProduct
     {
-        int[] Sum(int value)
+        int Sum(int value)
         {
             int sum = 0;
-            var a = new int[value];
             for (int i = 0; i < value; i++)
             {
                 sum += (i + 1);
-                a[i] = sum;
             }
-            return a;
+            return sum;
         }
-
-        int[] Product(int value)
+        int Product(int value)
         {
             int product = 1;
-            var a = new int[value];
             for (int i = 0; i < value; i++)
             {
                 product = product * (i + 1);
-                a[i] = product;
             }
-            return a;
+            return product;
         }
-        int[] Answer(int b, int value, string ans)
+        int Answer(int value, string ans)
         {
             if (ans == "yes")
             {
@@ -41,18 +40,16 @@ namespace UnitTestProject1.Elementary
             {
                 return Product(value);
             }
-            else return new int[0];
+            else return 0;
         }
-
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.IsTrue(Sum(5).SequenceEqual(new[] {1, 3, 6, 10, 15}));
-            Assert.IsTrue(Product(5).SequenceEqual(new[] { 1, 2, 6, 24, 120 }));
+            Assert.IsTrue(Sum(5).Equals(15));
+            Assert.IsTrue(Product(5).Equals(120));
 
-            Assert.IsTrue(Answer(1, 5, "yes").SequenceEqual(new[] { 1, 3, 6, 10, 15 }));
-            Assert.IsTrue(Answer(1, 5, "no").SequenceEqual(new[] { 1, 2, 6, 24, 120 }));
-
+            Assert.IsTrue(Answer(5, "yes").Equals(15));
+            Assert.IsTrue(Answer(5, "no").Equals(120));
         }
     }
 }

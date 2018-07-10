@@ -6,6 +6,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1.ListsAndStrings
 {
+    /// <summary>
+    /// Write a function that computes the running total of a list.
+    /// </summary>
     [TestClass]
     public class Test05_RunningTotal
     {

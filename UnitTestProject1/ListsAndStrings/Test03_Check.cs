@@ -4,6 +4,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1.ListsAndStrings
 {
+    /// <summary>
+    /// Write a function that checks whether an element occurs in a list.
+    /// </summary>
     [TestClass]
     public class Test03_Check
     {

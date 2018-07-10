@@ -4,6 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1.Elementary
 {
+    /// <summary>
+    /// Write a program that asks the user for their name and greets them with their name.
+    /// Modify such that only the users Alice and Bob are greeted with their names.
+    /// </summary>
     [TestClass]
     public class Test03_Greeting
     {

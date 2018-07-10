@@ -8,22 +8,19 @@ using ClassLibrary1;
 
 namespace ConsoleApp1
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        var game = new Game(secret: 5, log: Console.WriteLine);
+
+        Console.WriteLine("Guess number from 1 to 9");
+
+        while (true)
         {
-            var game = new Game(secret: 5, log: Console.WriteLine);
+            string userValue = Console.ReadLine();
+            int input = int.Parse(userValue);
 
-            Console.WriteLine("Guess number from 1 to 9");
-
-            while (true)
-            {
-                string userValue = Console.ReadLine();
-                int input = int.Parse(userValue);
-
-                if (game.Match(input)) break;
-            }
-            Console.WriteLine();
+            if (game.Match(input)) break;
         }
+        Console.WriteLine();
     }
 }

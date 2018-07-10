@@ -5,6 +5,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1.ListsAndStrings
 {
+    /// <summary>
+    /// Write function that reverses a list, preferably in place.
+    /// </summary>
     [TestClass]
     public class Test02_Reverse
     {

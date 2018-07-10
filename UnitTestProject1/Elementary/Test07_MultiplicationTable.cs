@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace UnitTestProject1.Elementary
 {
+    /// <summary>
+    /// Write a program that prints a multiplication table for numbers up to 12.
+    /// </summary>
     [TestClass]
     public class Test07_MultiplicationTable
     {

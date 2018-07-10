@@ -5,6 +5,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1.ListsAndStrings
 {
+    /// <summary>
+    /// Write a function that returns the largest element in a list.
+    /// </summary>
     [TestClass]
     public class Test01_LagestElement
     {
