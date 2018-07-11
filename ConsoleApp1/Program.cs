@@ -5,22 +5,25 @@ using System.Linq;
 using System.Diagnostics;
 using System.Collections.Generic;
 using ClassLibrary1;
-
 namespace ConsoleApp1
 {
-    static void Main(string[] args)
+    class Program
     {
-        var game = new Game(secret: 5, log: Console.WriteLine);
-
-        Console.WriteLine("Guess number from 1 to 9");
-
-        while (true)
+        static void Main(string[] args)
         {
-            string userValue = Console.ReadLine();
-            int input = int.Parse(userValue);
+            var game = new Game(secret: 5, log: Console.WriteLine);
 
-            if (game.Match(input)) break;
+            Console.WriteLine("Guess number from 1 to 9");
+
+            while (true)
+            {
+                string userValue = Console.ReadLine();
+                int input = int.Parse(userValue);
+
+                if (game.Match(input)) break;
+            }
+            Console.WriteLine();
         }
-        Console.WriteLine();
     }
+    
 }

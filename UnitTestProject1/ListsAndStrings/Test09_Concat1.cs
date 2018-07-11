@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace UnitTestProject1.ListsAndStrings
 {
+    /// <summary>
+    /// Write a function that concatenates two lists. [a,b,c], [1,2,3] → [a,b,c,1,2,3]
+    /// </summary>
     [TestClass]
     public class Test09_Concat1
     {
@@ -28,7 +31,7 @@ namespace UnitTestProject1.ListsAndStrings
             List<object> a = new List<object>() { "a", "b", "c" };
             List<object> b = new List<object>() { 1, 2, 3 };
 
-           Assert.(MyConcat(a,b))(a.Concat(b).ToString);
+            Assert.IsTrue(MyConcat(a,b).Equals(a.Concat(b).ToString));
 
         }
     }
