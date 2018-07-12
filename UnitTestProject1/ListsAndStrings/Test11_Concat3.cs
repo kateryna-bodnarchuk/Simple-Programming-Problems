@@ -42,6 +42,11 @@ namespace UnitTestProject1.ListsAndStrings
                         aIndex++;
                     }
                 }
+                else
+                {
+                    result[resultIndex] = b[bIndex];
+                    bIndex++;
+                }
                 resultIndex++;
             }
             return result;
@@ -49,8 +54,8 @@ namespace UnitTestProject1.ListsAndStrings
         [TestMethod]
         public void TestMethod1()
         {
-            int[] a = new int[] { 1, 4, 5 };
-            int[] b = new int[] { 2, 3 };
+            int[] a = new int[] { 1, 4 };
+            int[] b = new int[] { 2, 3, 5 };
             var c = MyConcat(a, b);
             Assert.IsTrue(MyConcat(a,b).SequenceEqual(new int [] { 1, 2, 3, 4, 5 }));
         }
