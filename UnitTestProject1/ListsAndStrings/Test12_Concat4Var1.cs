@@ -4,13 +4,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1.ListsAndStrings
 {
+    /// <summary>
+    /// Write a function that rotates a list by k elements. For example [1,2,3,4,5,6] rotated by two becomes [5,6,3,4,1,2].
+    /// </summary>
     [TestClass]
-    public class Test12_Concat4
+    public class Test12_Concat4Var1
     {
-        int[] MyConcat(int [] a)
+        int[] MyConcat(int [] a, int k)
         {
             int n = a.Length;
-            int k = 2;
             var middle = n / 2;
 
             for (int leftStartIndex = 0; leftStartIndex < middle; leftStartIndex += k)
@@ -23,7 +25,8 @@ namespace UnitTestProject1.ListsAndStrings
 
                 var rightStartIndex =  n - k - leftStartIndex;
                 for (int blockIndex = 0; blockIndex < k; blockIndex++)
-                {
+                {   
+
                     a[leftStartIndex + blockIndex] = a[rightStartIndex + blockIndex];
                     a[rightStartIndex + blockIndex] = temp[blockIndex];
                 }
@@ -34,9 +37,9 @@ namespace UnitTestProject1.ListsAndStrings
         [TestMethod]
         public void TestMethod1()
         {
-            int[] a = new int[] { 1, 2, 3, 4};
-            var c = MyConcat(a);
-            Assert.IsTrue(MyConcat(a).SequenceEqual(new int[] { 3, 4, 1, 2 }));
+            int[] a = new int[] { 1, 2, 3, 4, 5, 6};
+            var c = MyConcat(a, 2);
+            Assert.IsTrue(c.SequenceEqual(new int[] { 5, 6, 3, 4, 1, 2 }));
         }
     }
 }
