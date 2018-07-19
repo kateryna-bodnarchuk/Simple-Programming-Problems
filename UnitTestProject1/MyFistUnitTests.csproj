@@ -53,6 +53,7 @@
     <Compile Include="ListsAndStrings\Test11_Concat3.cs" />
     <Compile Include="ListsAndStrings\Test12_Concat4Var1.cs" />
     <Compile Include="ListsAndStrings\Test12_Concat4Var2.cs" />
+    <Compile Include="ListsAndStrings\Test13_Fibonacci.cs" />
     <Compile Include="PerfectSquareCode.cs" />
     <Compile Include="Elementary\Test03_Greeting.cs" />
     <Compile Include="Elementary\Test04_Sum.cs" />
