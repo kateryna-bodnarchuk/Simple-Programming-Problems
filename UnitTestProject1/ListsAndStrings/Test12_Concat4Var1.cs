@@ -5,7 +5,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject1.ListsAndStrings
 {
     /// <summary>
-    /// Write a function that rotates a list by k elements. For example [1,2,3,4,5,6] rotated by two becomes [5,6,3,4,1,2].
+    /// Write a function that rotates a list by k elements. 
+    /// For example [1,2,3,4,5,6] rotated by two becomes [5,6,3,4,1,2].
     /// </summary>
     [TestClass]
     public class Test12_Concat4Var1

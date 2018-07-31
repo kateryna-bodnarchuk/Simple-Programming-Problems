@@ -5,7 +5,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject1.ListsAndStrings
 {
     /// <summary>
-    /// Write a function that rotates a list by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2].
+    /// Write a function that rotates a list by k elements. 
+    /// For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2].
     /// Try solving this without creating a copy of the list.
     /// </summary>
     [TestClass]
@@ -26,7 +27,6 @@ namespace UnitTestProject1.ListsAndStrings
         T[] MyConcat<T>(T[] a)
         {
             int n = a.Length;
-            T[] result = new T[n];
             int k = 4;
             int movements = 0;
 
@@ -45,14 +45,14 @@ namespace UnitTestProject1.ListsAndStrings
                 }
                 while (sourceIndex != startIndex);
             }
-            return result;
+            return a;
         } 
         [TestMethod]
         public void TestMethod1()
         {
             string [] a = new string [] { "a", "b", "c", "d", "e", "f" };
             var c = MyConcat<string>(a);
-            Assert.IsTrue(c.SequenceEqual(new string []{ "c", "d", "e", "f", "a", "b" }));
+            Assert.IsTrue(c.SequenceEqual(new string []{"c", "d", "e", "f", "a", "b"}));
         }
     }
 }
