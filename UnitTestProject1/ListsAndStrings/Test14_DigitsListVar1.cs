@@ -5,8 +5,11 @@ using System.Linq;
 
 namespace UnitTestProject1.ListsAndStrings
 {
+    /// <summary>
+    /// rite a function that takes a number and returns a list of its digits.
+    /// </summary>
     [TestClass]
-    public class Test14_Digits
+    public class Test14_DigitsListVar1
     {
         List <int> Count (int number)
         {

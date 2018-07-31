@@ -54,7 +54,12 @@
     <Compile Include="ListsAndStrings\Test12_Concat4Var1.cs" />
     <Compile Include="ListsAndStrings\Test12_Concat4Var2.cs" />
     <Compile Include="ListsAndStrings\Test13_Fibonacci.cs" />
-    <Compile Include="ListsAndStrings\Test14_Digits.cs" />
+    <Compile Include="ListsAndStrings\Test14_DigitsListVar1.cs" />
+    <Compile Include="ListsAndStrings\Test15_DigitsListVar2.cs" />
+    <Compile Include="ListsAndStrings\Test17_MergeSort.cs" />
+    <Compile Include="ListsAndStrings\Test17_InsertSort.cs" />
+    <Compile Include="ListsAndStrings\Test17_SelectionSort.cs" />
+    <Compile Include="ListsAndStrings\Test17_QuickSort.cs" />
     <Compile Include="PerfectSquareCode.cs" />
     <Compile Include="Elementary\Test03_Greeting.cs" />
     <Compile Include="Elementary\Test04_Sum.cs" />
