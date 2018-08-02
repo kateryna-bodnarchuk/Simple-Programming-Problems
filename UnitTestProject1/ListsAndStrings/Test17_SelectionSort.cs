@@ -15,28 +15,28 @@ namespace UnitTestProject1.ListsAndStrings
             int n = a.Length;
             for (int i = 0; i < n; i++)
             {
+                int minValue = a[i];
                 int minIndex = i;
+
                 for (int j = i + 1; j < n; j++)
                 {
-                    if (a[j] < a[i])
+                    if (a[j] < minValue)
                     {
+                        minValue = a[j];
                         minIndex = j;
                     }
                 }
-                if (minIndex != i)
-                {
-                    int temp = a[i];
-                    a[i] = a[minIndex];
-                    a[minIndex] = temp;
-                }
+                int temp = a[minIndex];
+                a[minIndex] = a[i];
+                a[i] = temp; 
             }
-            return a;
+         return a;
         }
         [TestMethod]
         public void TestMethod1()
         {
-            var a = new int[] { 6, 2, 3, 1, 4, 5 };
-            Assert.IsTrue(SelectionSort(a).SequenceEqual(new[] { 1, 2, 3, 4, 5, 6 }));
+            var a = new int[] { 2, 6, 3, 1, 4, 5};
+            Assert.IsTrue(SelectionSort(a).SequenceEqual(new[] { 1, 2, 3, 4, 5, 6}));
         }
     }
 }
