@@ -1,54 +1,60 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1.ListsAndStrings
 {
-    /// <summary>
-    /// Implement Quick sort
-    /// </summary>
+    ///<summary>
+    ///Implement Quick sort
+    ///</summary>
     [TestClass]
     public class Test17_QuickSort
     {
-        int [] QuickSort(int[] a, int i, int j)
+        int [] Sort (int [] a)
         {
-            if (i < j)
-            {
-                int pos = Partition(a, i, j);
-                QuickSort(a, i, pos - 1);
-                QuickSort(a, pos + 1, j);
-            }
+            QuickSort(a, 0, a.Length - 1);
             return a;
         }
 
-        int Partition(int[] a, int i, int j)
+        void QuickSort(int[] a, int i, int j)
         {
-            int pivot = a[j];
-            int small = i - 1;
+            if (i < j)
+            {
+                int q = SortPart(a, i, j);
+                QuickSort(a, i, q - 1);
+                QuickSort(a, q + 1, j);
+            }
+        }
+        int SortPart(int[] a, int i, int j)
+        {
+            int x = a[j];
+            int minValue = i - 1;
 
             for (int k = i; k < j; k++)
             {
-                if (a[k] <= pivot)
+                if (a[k] <= x)
                 {
-                    small++;
-                    Swap(a, k, small);
+                    minValue++;
+                    Swap(a, k, minValue);
                 }
             }
-            Swap(a, j, small + 1);
-            return small + 1;
-                     }
-//        int Swap(int[] a, int k, int small)
-//        {
-//            int temp;
-//            temp = a[k];
-//            a[k] = a[small];
-//            a[small] = temp;
-//        }
-//        return ;
+            Swap(a, j, minValue + 1);
+            return minValue + 1;
+        }
+        void Swap(int[] a, int k, int small)
+        {
+            int temp = a[k];
+            a[k] = a[small];
+            a[small] = temp;
+        }
 
-//    }
-//    [TestMethod]
-//        public void TestMethod1()
-//        {
-//        }
-//    }
-//}
+        [TestMethod]
+        public void TestMethod1()
+        {
+            var a = new [] { 6, 2, 3, 1, 4, 5 };
+            Assert.IsTrue(Sort(a).SequenceEqual(new[] { 1, 2, 3, 4, 5, 6 }));
+        }
+    }
+} 
+
