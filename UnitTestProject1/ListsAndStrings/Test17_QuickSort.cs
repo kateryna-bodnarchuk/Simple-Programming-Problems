@@ -42,11 +42,11 @@ namespace UnitTestProject1.ListsAndStrings
             Swap(a, j, minValue + 1);
             return minValue + 1;
         }
-        void Swap(int[] a, int k, int small)
+        void Swap(int[] a, int k, int minValue)
         {
             int temp = a[k];
-            a[k] = a[small];
-            a[small] = temp;
+            a[k] = a[minValue];
+            a[minValue] = temp;
         }
 
         [TestMethod]
