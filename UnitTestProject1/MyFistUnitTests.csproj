@@ -60,6 +60,7 @@
     <Compile Include="ListsAndStrings\Test17_InsertSort.cs" />
     <Compile Include="ListsAndStrings\Test17_SelectionSort.cs" />
     <Compile Include="ListsAndStrings\Test17_QuickSort.cs" />
+    <Compile Include="ListsAndStrings\Test17_BubbleSort.cs" />
     <Compile Include="PerfectSquareCode.cs" />
     <Compile Include="Elementary\Test03_Greeting.cs" />
     <Compile Include="Elementary\Test04_Sum.cs" />
