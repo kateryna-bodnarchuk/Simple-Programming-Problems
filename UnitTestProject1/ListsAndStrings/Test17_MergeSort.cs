@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -11,66 +10,58 @@ namespace UnitTestProject1.ListsAndStrings
     [TestClass]
     public class Test17_MergeSort
     {
-        List<int> MergeSort(List<int> a)
+        int [] Sort(int[] a)
         {
-            if (a.Count >= 1) return a;
-
-            List<int> left = new List<int>();
-            List<int> right = new List<int>();
-            int middle = a.Count / 2;
-
-            for (int i = 0; i < middle; i++)
-            {
-                left.Add(a[i]);
-            }
-            for (int i = middle; i < a.Count; i++)
-            {
-                right.Add(a[i]);
-            }
-            left = MergeSort(left);
-            right = MergeSort(right);
-
-            return Merge(left, right);
+            MergeSort(a, 0, a.Length - 1);
+            return a;
         }
-        List<int> Merge(List<int> left, List<int> right)
+
+        void MergeSort(int[] a, int left, int right)
         {
-            List<int> result = new List<int>();
-            while (left.Count > 0 || right.Count > 0)
+            if (left == right) return;
+            var middle = (left + right) / 2;
+            MergeSort(a, left, middle);
+            MergeSort(a, middle + 1, right);
+            Merge(a, left, middle, right);
+        }
+
+        void Merge(int[] a, int left, int middle, int right)
+        {
+            var n1 = middle - left + 1;
+            var l = new int[n1 + 1];
+            l[l.Length - 1] = int.MaxValue;
+            for (int i = 0; i < n1; i++)
             {
-                if (left.Count > 0 && right.Count > 0)
+                l[i] = a[left + i];
+            }
+            var n2 = right - middle;
+            var r = new int[n2 + 1];
+            r[r.Length - 1] = int.MaxValue;
+            for (int i = 0; i < n2; i++)
+            {
+                r[i] = a[middle + i + 1];
+            }
+            int leftSource = 0;
+            int rightSource = 0;
+            for (int i = left; i <= right; i++)
+            {
+                if (l[leftSource] <= r[rightSource])
                 {
-                    if (left.First() <= right.First())
-                    //Comparing First two elements to see which is smaller
-                    {
-                        result.Add(left.First());
-                        left.Remove(left.First());
-                    }
-                    else
-                    {
-                        result.Add(right.First());
-                        right.Remove(right.First());
-                    }
+                    a[i] = l[leftSource];
+                    leftSource++;
                 }
-                else if (left.Count > 0)
+                else
                 {
-                    result.Add(left.First());
-                    left.Remove(left.First());
-                }
-                else if (right.Count > 0)
-                {
-                    result.Add(right.First());
-                    right.Remove(right.First());
+                    a[i] = r[rightSource];
+                    rightSource++;
                 }
             }
-            return result;
         }
-        
-    [TestMethod]
+        [TestMethod]
         public void TestMethod1()
         {
-            var a = new List<int> { 6, 2, 3, 1, 4, 5 };
-            Assert.IsTrue(MergeSort(a).SequenceEqual(new[] { 1, 2, 3, 4, 5, 6 }));
-            
+            var a = new int[] { 6, 2, 3, 1, 4, 5 };
+            Assert.IsTrue(Sort(a).SequenceEqual(new[] { 1, 2, 3, 4, 5, 6 }));
         }
     }
 }
