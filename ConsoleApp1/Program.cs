@@ -11,50 +11,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            void MergeSort(int[] a, int left, int right)
+            var game = new Game(secret: 5, log: Console.WriteLine);
+
+            Console.WriteLine("Guess number from 1 to 9");
+
+            while (true)
             {
-                int middle = 0;
+                string userValue = Console.ReadLine();
+                int input = int.Parse(userValue);
 
-                if (right > left)
-                {
-                    middle = (left + right) / 2;
-                    MergeSort(a, left, middle);
-                    MergeSort(a, middle + 1, right);
-                    Merge(a, left, middle + 1, right);
-                }
+                if (game.Match(input)) break;
             }
-            int[] Merge(int[] a, int left, int middle, int right)
-            {
-                int[] temp = new int[a.Length];
-                int leftEndIndex = middle - 1;
-                int sourceIndex = left;
-                int source = (right - left + 1);
-
-                while (left <= middle && middle <= right)
-                {
-                    if (a[left] <= a[middle])
-                    {
-                        temp[sourceIndex++] = a[left++];
-                    }
-                    else
-                    {
-                        temp[sourceIndex++] = a[middle++];
-                    }
-                }
-                while (left <= leftEndIndex)
-                    temp[sourceIndex++] = a[left++];
-
-                while (middle <= right)
-                {
-                    temp[sourceIndex++] = a[middle++];
-                }
-                for (int i = 0; i <= source; i++)
-                {
-                    a[right] = temp[right];
-                    right--;
-                }
-                return a;
-            }
+            Console.WriteLine();
         }
     }
 }

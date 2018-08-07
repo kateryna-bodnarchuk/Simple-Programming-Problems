@@ -61,6 +61,7 @@
     <Compile Include="ListsAndStrings\Test17_SelectionSort.cs" />
     <Compile Include="ListsAndStrings\Test17_QuickSort.cs" />
     <Compile Include="ListsAndStrings\Test17_BubbleSort.cs" />
+    <Compile Include="ListsAndStrings\Test18_BinarySearch.cs" />
     <Compile Include="PerfectSquareCode.cs" />
     <Compile Include="Elementary\Test03_Greeting.cs" />
     <Compile Include="Elementary\Test04_Sum.cs" />
