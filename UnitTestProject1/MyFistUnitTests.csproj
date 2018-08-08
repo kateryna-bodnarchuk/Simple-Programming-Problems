@@ -63,6 +63,7 @@
     <Compile Include="ListsAndStrings\Test18_BinarySearch.cs" />
     <Compile Include="ListsAndStrings\Test19_Frame.cs" />
     <Compile Include="ListsAndStrings\Test20_PigLatin.cs" />
+    <Compile Include="ListsAndStrings\Test16_Bases.cs" />
     <Compile Include="PerfectSquareCode.cs" />
     <Compile Include="Elementary\Test03_Greeting.cs" />
     <Compile Include="Elementary\Test04_Sum.cs" />
