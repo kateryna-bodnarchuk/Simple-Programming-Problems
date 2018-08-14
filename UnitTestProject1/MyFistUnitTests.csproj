@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\UnitTest1.cs" />
     <Compile Include="ListsAndStrings\Test09_Concat1.cs" />
     <Compile Include="ListsAndStrings\Test10_Concat2.cs" />
     <Compile Include="ListsAndStrings\Test11_Concat3.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="ListsAndStrings\Test19_Frame.cs" />
     <Compile Include="ListsAndStrings\Test20_PigLatin.cs" />
     <Compile Include="ListsAndStrings\Test16_Bases.cs" />
+    <Compile Include="ListsAndStrings\Test15_DigitsManipulation.cs" />
     <Compile Include="PerfectSquareCode.cs" />
     <Compile Include="Elementary\Test03_Greeting.cs" />
     <Compile Include="Elementary\Test04_Sum.cs" />
@@ -92,6 +94,10 @@
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
       <Project>{BD0C1395-F921-4688-AAC3-BBF1B8BB7A64}</Project>
       <Name>ClassLibrary1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Collections\Collections.csproj">
+      <Project>{6efccc78-5690-4d96-bdc2-f5d0843a564a}</Project>
+      <Name>Collections</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

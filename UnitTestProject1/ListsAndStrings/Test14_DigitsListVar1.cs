@@ -11,7 +11,7 @@ namespace UnitTestProject1.ListsAndStrings
     [TestClass]
     public class Test14_DigitsListVar1
     {
-        List <int> Count (int number)
+        List <int> GetDigits(int number)
         {
             var digits = new List<int>();
             do
@@ -26,7 +26,7 @@ namespace UnitTestProject1.ListsAndStrings
         public void TestMethod1()
         {
             var n = 123;
-            Assert.IsTrue(Count(n).SequenceEqual(new int[] { 1, 2, 3 }));
+            Assert.IsTrue(GetDigits(n).SequenceEqual(new int[] { 1, 2, 3 }));
         }
     }
 }
