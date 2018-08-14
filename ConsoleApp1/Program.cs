@@ -11,18 +11,32 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var game = new Game(secret: 5, log: Console.WriteLine);
+            Node<int> root = GetTree();
+            Print(root,);
+            Console.ReadKey();
+        }
 
-            Console.WriteLine("Guess number from 1 to 9");
+        private static Node<int> GetTree()
+        {
+            var root = new Node<int>(1);
+            root.Children.Add(new Node<int>(2));
+            var node3 = new Node<int>(3);
+            root.Children.Add(node3);
+            node3.Children.Add(new Node<int>(4));
+            node3.Children.Add(new Node<int>(5));
+            root.Children.Add(new Node<int>(6));
+            root.Children.Add(new Node<int>(7));
+            return root;
+        }
 
-            while (true)
+        private static void Print(Node<int> node, int level)
+        {
+            string space = string.Concat(Enumerable.Repeat(" ", level));
+            Console.WriteLine(space + node.Value);
+            foreach (var child in node.Children)
             {
-                string userValue = Console.ReadLine();
-                int input = int.Parse(userValue);
-
-                if (game.Match(input)) break;
+                Print(child, level + 1);
             }
-            Console.WriteLine();
         }
     }
 }
