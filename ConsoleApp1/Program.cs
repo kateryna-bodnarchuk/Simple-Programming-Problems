@@ -12,7 +12,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Node<int> root = GetTree();
-            Print(root,);
+            Print(root,0);
             Console.ReadKey();
         }
 
