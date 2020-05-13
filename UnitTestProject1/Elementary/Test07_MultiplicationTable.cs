@@ -11,12 +11,12 @@ namespace UnitTestProject1.Elementary
     [TestClass]
     public class Test07_MultiplicationTable
     {
-        int[] Multipl(int size, int jMax)
+        int[] Multipl(int multiplier, int max)
         {
-            var a = new int[jMax];
-            for (int i = 0; i <= size; i++)
+            var a = new int[max];
+            for (int i = 0; i <= multiplier; i++)
             {
-                for (int j = 0; j < jMax; j++)
+                for (int j = 0; j < max; j++)
                 {
                     int product = i * (j + 1);
                     a[j] = product;
